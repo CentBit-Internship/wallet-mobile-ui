@@ -1,12 +1,25 @@
 import * as React from 'react'
-import { Text, View } from 'react-native';
+import { View, ScrollView} from 'react-native';
+import HomeFirstComponent from '../../../Components/HomeFirstCom';
+import HomeFourthComponent from '../../../Components/HomeFourthCom';
+import HomeSecondComponent from '../../../Components/HomeSecondComp';
+import HomeThirdComponent from '../../../Components/HomeThirdCom';
+import { COLORS } from '../../../Constants/colors';
+
 
 export default function HomeScreen(){
      return(
-          <View>
-               <Text>
-                    This is the Home Screen
-               </Text>
+          <View style={{
+               backgroundColor: COLORS.colorDarkBlue,
+               flex: 1
+          }}>
+               <HomeFirstComponent/>
+               <HomeSecondComponent/>
+               <ScrollView>
+                    <HomeThirdComponent />
+                    <HomeFourthComponent />
+               </ScrollView>
+               
           </View>
      );
 }
