@@ -7,7 +7,7 @@ import HomeThirdComponent from '../../../Components/HomeThirdCom';
 import { COLORS } from '../../../Constants/colors';
 
 
-export default function HomeScreen(){
+export default function HomeScreen({navigation}){
      return(
           <View style={{
                backgroundColor: COLORS.colorDarkBlue,
@@ -16,7 +16,7 @@ export default function HomeScreen(){
                <HomeFirstComponent/>
                <HomeSecondComponent/>
                <ScrollView>
-                    <HomeThirdComponent />
+                    <HomeThirdComponent navigation={navigation}/>
                     <HomeFourthComponent />
                </ScrollView>
                

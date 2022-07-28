@@ -16,7 +16,7 @@ export default function MainContainer(){
                          component={TabLayoutContainer}
                          options={{headerShown: false}}
                     />
-                    <Stack.Screen name="SendCoin" component={SendCoincreen}/>
+                    <Stack.Screen name="SendCoin" component={SendCoincreen} options={{headerShown: false}}/>
                     <Stack.Screen name="PayBills" component={PayBillsScreen}/>
 
                </Stack.Navigator>

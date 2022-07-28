@@ -19,5 +19,7 @@ export const COLORS = {
      colorLavender1: "#BF8FCC",
      colorRedOrange: "#FF681F",
      colorYellowOrange: "#FFAE42",
-     colorblack: "#000"
+     colorblack: "#000",
+     colorNewBlack: "#342f52",
+     colorWheat: "#dbdae3"
 }

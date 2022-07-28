@@ -2,11 +2,14 @@ import * as React from 'react';
 import { View, ScrollView, TouchableOpacity, Text } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { COLORS } from '../Constants/colors';
+import { useRoute } from '@react-navigation/native';
 
-export default function HomeThirdComponent(){
+export default function HomeThirdComponent({navigation}){
+
+     // const route = useRoute()
      return(
           <View style={{paddingTop: 60, paddingStart: 20, paddingEnd: 20, paddingBottom: 40}}>
-               <ScrollView horizontal>
+               <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                     <View style={{alignItems: 'center', marginRight: 20}}>
                          <TouchableOpacity
                               style={{
@@ -14,7 +17,7 @@ export default function HomeThirdComponent(){
                                    padding: 12,
                                    borderRadius: 50
                               }}
-                              // onPress={{}}
+                              onPress={() => navigation.navigate("SendCoin")}
                               >
                               <Ionicons name={'send-outline'} size={32} color={COLORS.colorMaximumGreen}/>
                               

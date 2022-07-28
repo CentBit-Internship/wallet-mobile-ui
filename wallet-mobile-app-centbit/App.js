@@ -3,8 +3,8 @@ import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { COLORS } from './Constants/colors';
 import MainContainer from './Navigation/MainContainer';
+import { useState } from 'react';
 import TabLayoutContainer from './Navigation/TabLayoutContainer';
-
 
 export default function App() {
   return (
@@ -12,7 +12,9 @@ export default function App() {
       backgroundColor: COLORS.colorDarkBlue,
       flex: 1
     }}>
+      
       <MainContainer/>
+      
     </SafeAreaView>
   );
 }
