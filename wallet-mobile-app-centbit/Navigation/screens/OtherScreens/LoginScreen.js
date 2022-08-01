@@ -13,16 +13,17 @@ export default function LoginScreen({navigation}){
                          fontWeight: '900',
                          fontSize: 40,
                          marginVertical: 10,
-                         color: COLORS.colorDarkBlue
+                         color: COLORS.colorWhite
                          }}>Welcome Back</Text>
-                    <Text style={{textAlign: "center"}}>Login to your Account</Text>
+                    <Text style={{textAlign: "center", color: COLORS.colorWhite}}>Login to your Account</Text>
                
                </View>
                <View style={styles.loginDetails}>
                     <Text style={styles.emailText}>
                          Email
                     </Text>
-                    <TextInput placeholder='Email'  
+                    <TextInput placeholder='Email' 
+                    placeholderTextColor="#ffffff" 
                     style={{
                          alignItems: "center",
                          height: 50,
@@ -30,25 +31,25 @@ export default function LoginScreen({navigation}){
                          marginBottom: 20,
                          borderRadius: 15,
                          paddingLeft: 20,
-                         borderColor: COLORS.colorDarkBlue}}/>
+                         borderColor: COLORS.colorWhite}}/>
                     <Text style={styles.passwordText}>
                          Password
                     </Text>
-                    <TextInput placeholder='Password' secureTextEntry={true} style={styles.passwordInput}/>
+                    <TextInput placeholder='Password' secureTextEntry={true} style={styles.passwordInput} placeholderTextColor="#ffffff"/>
                </View>
                <View style={{
                     flexDirection: 'row',
                     justifyContent: 'flex-end',
                     marginRight: 20}}>
-                    <Text>Don't have an Account? </Text>
+                    <Text style={{color: COLORS.colorWhite}}>Don't have an Account?  </Text>
                     <Text style={{
                          fontWeight: "900",
-                         color: COLORS.colorDarkBlue
+                         color: COLORS.colorJazzberryJam
                     }}>Sign up</Text>
                </View>
                <TouchableOpacity
                     style={{
-                         backgroundColor: COLORS.colorDarkBlue,
+                         backgroundColor: COLORS.colorJazzberryJam,
                          padding: 20,
                          margin: 15,
                          alignItems: "center",
@@ -67,11 +68,12 @@ export default function LoginScreen({navigation}){
 const styles = StyleSheet.create({
      container: {
           flex: 1,
-          backgroundColor: '#ffffff'
+          backgroundColor: COLORS.colorDarkBlue
      },
      image: {
           width: 400,
           height: 250,
+          marginTop: 10
      },
      headerText: {
           
@@ -86,7 +88,8 @@ const styles = StyleSheet.create({
      emailText: {
           textAlign: "left", 
           marginBottom: 10,
-          fontWeight: "700"
+          fontWeight: "700",
+          color: COLORS.colorWhite
      },
      emailInput: {
           
@@ -98,10 +101,11 @@ const styles = StyleSheet.create({
           marginBottom: 20,
           borderRadius: 15,
           paddingLeft: 20,
-          borderColor: COLORS.colorDarkBlue
+          borderColor: COLORS.colorWhite
      },
      passwordText: {
           paddingBottom: 10,
-          fontWeight: "700"
+          fontWeight: "700",
+          color: COLORS.colorWhite
      }
 });
