@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "wallet-mobile-app-centbit",
+    "slug": "wallet-mobile-app-centbit",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
