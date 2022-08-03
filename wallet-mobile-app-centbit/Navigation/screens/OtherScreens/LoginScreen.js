@@ -5,16 +5,10 @@ import { COLORS } from '../../../Constants/colors';
 
 export default function LoginScreen({navigation}){
      return(
-          <View style={styles.container}>
+          <View style={styles.loginMainContainer}>
                <View >
                     <Image source={require("../../../assets/login_image.webp")} resizeMode="center" style={styles.image}/>
-                    <Text style={{
-                         textAlign: "center",
-                         fontWeight: '900',
-                         fontSize: 40,
-                         marginVertical: 10,
-                         color: COLORS.colorWhite
-                         }}>Welcome Back</Text>
+                    <Text style={styles.headerText}>Welcome Back</Text>
                     <Text style={{textAlign: "center", color: COLORS.colorWhite}}>Login to your Account</Text>
                
                </View>
@@ -24,40 +18,27 @@ export default function LoginScreen({navigation}){
                     </Text>
                     <TextInput placeholder='Email' 
                     placeholderTextColor="#ffffff" 
-                    style={{
-                         alignItems: "center",
-                         height: 50,
-                         borderWidth: 1,
-                         marginBottom: 20,
-                         borderRadius: 15,
-                         paddingLeft: 20,
-                         borderColor: COLORS.colorWhite}}/>
+                    style={styles.emailInput}/>
                     <Text style={styles.passwordText}>
                          Password
                     </Text>
                     <TextInput placeholder='Password' secureTextEntry={true} style={styles.passwordInput} placeholderTextColor="#ffffff"/>
                </View>
-               <View style={{
-                    flexDirection: 'row',
-                    justifyContent: 'flex-end',
-                    marginRight: 20}}>
+               <View style={styles.doNotHaveAccountContainer}>
                     <Text style={{color: COLORS.colorWhite}}>Don't have an Account?  </Text>
-                    <Text style={{
+                    <Text
+                    onPress={() => navigation.navigate("Signup")} 
+                    style={{
                          fontWeight: "900",
                          color: COLORS.colorJazzberryJam
                     }}>Sign up</Text>
                </View>
                <TouchableOpacity
-                    style={{
-                         backgroundColor: COLORS.colorJazzberryJam,
-                         padding: 20,
-                         margin: 15,
-                         alignItems: "center",
-                         borderRadius: 20
-                    }}
+                    style={styles.loginButton}
                     onPress={() => navigation.navigate("TabLayoutContainer")}
                     >
-                    <Text style={{color: COLORS.colorWhite}}>Login</Text>
+                    <Text 
+                    style={{color: COLORS.colorWhite}}>Login</Text>
                </TouchableOpacity>
                
           </View>
@@ -66,7 +47,7 @@ export default function LoginScreen({navigation}){
 }
 
 const styles = StyleSheet.create({
-     container: {
+     loginMainContainer: {
           flex: 1,
           backgroundColor: COLORS.colorDarkBlue
      },
@@ -76,7 +57,11 @@ const styles = StyleSheet.create({
           marginTop: 10
      },
      headerText: {
-          
+          textAlign: "center",
+          fontWeight: '900',
+          fontSize: 40,
+          marginVertical: 10,
+          color: COLORS.colorWhite
      },
      bodyText: {
           fontFamily: "Foundation",
@@ -92,7 +77,13 @@ const styles = StyleSheet.create({
           color: COLORS.colorWhite
      },
      emailInput: {
-          
+          alignItems: "center",
+          height: 50,
+          borderWidth: 1,
+          marginBottom: 20,
+          borderRadius: 15,
+          paddingLeft: 20,
+          borderColor: COLORS.colorWhite
      },
      passwordInput: {
           alignItems: "center",
@@ -107,5 +98,17 @@ const styles = StyleSheet.create({
           paddingBottom: 10,
           fontWeight: "700",
           color: COLORS.colorWhite
+     },
+     doNotHaveAccountContainer: {
+          flexDirection: 'row',
+          justifyContent: 'flex-end',
+          marginRight: 20
+     },
+     loginButton: {
+          backgroundColor: COLORS.colorJazzberryJam,
+          padding: 20,
+          margin: 15,
+          alignItems: "center",
+          borderRadius: 20
      }
 });
