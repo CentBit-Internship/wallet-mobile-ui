@@ -1,11 +1,13 @@
 import * as React from 'react'
-import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet, Image, TextInput, TouchableOpacity , ScrollView} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { COLORS } from '../../../Constants/colors';
 
 export default function LoginScreen({navigation}){
      return(
-          <View style={styles.loginMainContainer}>
+
+        <ScrollView>
+            <View style={styles.loginMainContainer}>
                <View >
                     <Image source={require("../../../assets/login_image.webp")} resizeMode="center" style={styles.image}/>
                     <Text style={styles.headerText}>Welcome Back</Text>
@@ -42,6 +44,7 @@ export default function LoginScreen({navigation}){
                </TouchableOpacity>
                
           </View>
+        </ScrollView>
           
      );
 }

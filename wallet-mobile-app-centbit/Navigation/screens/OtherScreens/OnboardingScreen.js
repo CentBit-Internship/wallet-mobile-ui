@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import React, { useState } from "react"
-import { View, Text, Image } from "react-native"
+import { View, Text, Image , ScrollView} from "react-native"
 import AppIntroSlider from 'react-native-app-intro-slider'
 import { COLORS } from "../../../Constants/colors";
 
@@ -41,7 +41,8 @@ export default class App extends React.Component {
      
      _renderItem = ({ item }) => {
        return (
-         <View style={{flex: 1, alignItems: "center", backgroundColor: COLORS.colorDarkBlue}}>
+         <ScrollView>
+          <View style={{flex: 1, alignItems: "center", backgroundColor: COLORS.colorDarkBlue}}>
            
            <Image style={{width: '100%', height: 350}} source={item.image} resizeMode="cover"/>
            <Text style={{
@@ -56,6 +57,7 @@ export default class App extends React.Component {
                 color: COLORS.colorWhite
            }}>{item.text}</Text>
          </View>
+         </ScrollView>
        );
      }
      _onDone = () => {
