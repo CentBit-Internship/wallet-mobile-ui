@@ -1,12 +1,14 @@
 import * as React from 'react'
-import { Text, View, Image, TouchableOpacity } from 'react-native';
+import { Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
 import { COLORS } from '../../../Constants/colors';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { StatusBar } from 'expo-status-bar';
 
 export default function SendCoincreen({navigation}){
      return(
-          <View style={{
+          <ScrollView>
+
+<View style={{
                backgroundColor: COLORS.colorDarkBlue,
                flex: 1,
                // justifyContent: 'center',
@@ -50,5 +52,6 @@ export default function SendCoincreen({navigation}){
                   </View>
                     
           </View>
+          </ScrollView>
      );
 }
