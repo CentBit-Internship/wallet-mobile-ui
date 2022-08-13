@@ -84,18 +84,18 @@ const styles = StyleSheet.create({
 
      },
      right_icon:{
-          left:120
+          left:"120%"
 
           
      },
      wallet_txt:{
-          lineHeight:'70%',
+          lineHeight:70,
           color:'#ffffff',
           alignItems:'center',
           textAlignVertical:'center',
-          fontSize:'20pt',
+          fontSize:20,
           fontStyle:'bold',
-          fontFamily:'nunito'
+          // fontFamily:'nunito'
           
      
 
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
           
       //   marginTop:'4%',
       marginVertical:'2.3%',
-      borderRadius:"10%", 
+      borderRadius:10, 
       shadowColor:"rgba(0, 0, 0, 0.1)",
       alignItems:'center',
       shadowProp: {  
@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
         last_style:{
 
        fontSize:16,
-       fontFamily:'Nunito',
+     //   fontFamily:'Nunito',
        color:'#fff',
        letterSpacing:1,
        fontWeight:'700',

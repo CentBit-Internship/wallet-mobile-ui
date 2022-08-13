@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
     paddingTop:'3%',
 //   marginTop:'4%',
 marginVertical:'3%',
-borderRadius:"10%", 
-shadowColor:"rgba(0, 0, 0, 0.1)",
-shadowProp: {  
-    shadowOffset: {width: -2, height: 4},  
-    shadowColor: '#171717',  
-    shadowOpacity: 0.2,  
-    shadowRadius: 3,  
-  },  
+borderRadius:10, 
+// shadowColor:"rgba(0, 0, 0, 0.1)",
+// shadowProp: {  
+//     shadowOffset: {width: -2, height: 4},  
+//     shadowColor: '#171717',  
+//     shadowOpacity: 0.2,  
+//     shadowRadius: 3,  
+//   },  
 
 
     
@@ -57,20 +57,20 @@ shadowProp: {
   elips: {
     fontStyle: "normal",
     fontWeight: "600",
-    fontSize: "13pt",
+    fontSize: 13,
     alignItems: "center",
-    lineHeight: "20pt",
+    lineHeight: 20,
     color: "#3d6670",
   },
 
   amount: {
-    fontSize: "17",
+    fontSize: 17,
     fontWeight: "700",
     display: "flex",
     alignItems: "center",
     textAlign: "center",
-    letterSpacing: "0.02em",
+    letterSpacing: 0.02,
     fontStyle: "normal",
-    fontFamily: "IBM Plex Sans",
+    // fontFamily: "IBM Plex Sans",
   },
 });
